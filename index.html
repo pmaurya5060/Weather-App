@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="Container" class="container">
+
+
+        <div id="search-box">
+            <input type="text" id="search" placeholder="Enter City name..." required />
+            <button id="searchbutt" onclick="getWeather()"><i class="fa fa-search"></i></button>
+        </div>
+        <img id="placeholder-img" src="assets/search-city.png" alt="Search Prompt" />
+        <div class="overlay">
+        <div id="data">
+            <div class="countryDate">
+
+                <div id="city" class="details">
+                    <h3 id="location-svg"></h3>
+                    <h3 id="city-name"></h3>
+                    <h3 id="country-name"></h3>
+                </div>
+                <div id="date_details" class="details">
+                    <h3 id="day"></h3>
+                </div>
+            </div>
+            <div class="cloudTemp">
+
+
+                <div id="clouds-svg" class="details">
+    
+                </div>
+                <div id="temperature" class="details">
+                    <h1 id="temperature-value"></h1>
+                    <h3 id="weather-condition"></h3>
+                </div>
+            </div>
+
+            <div class="humiWind">
+
+                <div id="humidity" class="details">
+                    <div id="humidity-svg"></div>
+                    <div class="humidity-details">
+                        <div id="humidity-text"></div>
+                        <div id="humidity-value"></div>
+                    </div>
+                </div>
+                <div id="windspeed" class="details">
+                    <div id="wind-svg"></div>
+                    <div class="wind-details">
+                        <div id="wind-text"></div>
+                        <div id="wind-value"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="forecast-container">
+
+        </div>
+        </div>
+
+        <h2 id="error-message" class="hidden" style="color: #ffff; text-align: center;">Error fetching weather data.
+        </h2>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
